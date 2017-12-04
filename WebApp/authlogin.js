@@ -1,36 +1,26 @@
-(function(){
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDomzPTwcQtQLzn4xB4Nh3ydFGysydD_8o",
-    authDomain: "webapp-34ae0.firebaseapp.com",
-    databaseURL: "https://webapp-34ae0.firebaseio.com",
-    projectId: "webapp-34ae0",
-    storageBucket: "",
-    messagingSenderId: "518074473208"
-  };
-  firebase.initializeApp(config);
-
-  var email = document.getElementById('email').value;
-  var password = document.getElementById('password').value;
-  var login = document.getElementById('login');
-
-login.addEventListener('click' , e=> {
-        var email = email.value;
-        var password = password.value;
+document.getElementById("login").addEventListener("click", function(){
+  
+        var email=document.getElementById('email').value;
+        var password=document.getElementById('password').value;
         var auth = firebase.auth();
 
-        if (email.length < 4) {
-          alert('Please enter an email address.');
+        if (email.value=null) {
+          alert("Please Enter email");
+        }
+        else if (password.value=null) {
+          alert("Please Enter password");
+        }
+        else if (email.length < 4) {
+          alert('Please enter correct email address.');
           return;
         }
-        if (password.length < 4) {
-          alert('Please enter a password.');
+        else if (password.length < 4) {
+          alert('Please enter correct password.');
           return;
         }
-        
         // Sign in with email and pass.
         // [START authwithemail]
-        /*firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
@@ -41,10 +31,20 @@ login.addEventListener('click' , e=> {
             alert(errorMessage);
           }
           console.log(error);
-          
           // [END_EXCLUDE]
-        });*/
-        // [END authwithemail]
-      });
-    
+
+        });
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+        if(firebaseUser){
+        console.log(firebaseUser);
+        window.location="Home.html";
+         }
+         else{
+        console.log("Authentication Failed");
+        alert("Authentication Failed");
+        
+}
 });
+
+        // [END authwithemail]
+      },false);

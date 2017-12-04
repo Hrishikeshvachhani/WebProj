@@ -1,14 +1,22 @@
-function handleSignUp() {
+document.getElementById("signup").addEventListener("click", function(){
+
+      var username = prompt("Hello! What is your name?");
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
-      if (email.length < 4) {
-        alert('Please enter an email address.');
-        return;
-      }
-      if (password.length < 4) {
-        alert('Please enter a password.');
-        return;
-      }
+      if (email.value=null) {
+          alert("Please Enter email");
+        }
+        else if (password.value=null) {
+          alert("Please Enter password");
+        }
+        else if (email.length < 4) {
+          alert('Please enter correct email address.');
+          return;
+        }
+        else if (password.length < 4) {
+          alert('Please enter correct password.');
+          return;
+        }
       // Sign in with email and pass.
       // [START createwithemail]
       firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
@@ -21,8 +29,13 @@ function handleSignUp() {
         } else {
           alert(errorMessage);
         }
-        console.log(error);
-        // [END_EXCLUDE]
-      });
+    });
+       firebase.auth().onAuthStateChanged(firebaseUser => {
+        if(firebaseUser){
+        console.log(firebaseUser);
+        window.location="login.html";
+         }
+});
+      
       // [END createwithemail]
-    }
+    },false);
