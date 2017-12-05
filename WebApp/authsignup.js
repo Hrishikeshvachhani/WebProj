@@ -1,8 +1,12 @@
 document.getElementById("signup").addEventListener("click", function(){
-
+      
       var username = prompt("Hello! What is your name?");
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
+      var password1 = document.getElementById('password1').value;
+      var auth = firebase.auth();
+      var user = firebase.auth().currentUser;
+
       if (email.value=null) {
           alert("Please Enter email");
         }
@@ -17,9 +21,35 @@ document.getElementById("signup").addEventListener("click", function(){
           alert('Please enter correct password.');
           return;
         }
-      // Sign in with email and pass.
-      // [START createwithemail]
-      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+        else if (password != password1)
+        {
+          alert('Please Enter Same password');
+          return;
+        }
+
+       firebase.auth().createUserWithEmailAndPassword(email, password)
+      .then(function(){
+
+        firebase.auth().currentUser.sendEmailVerification().then(function() {
+        // Email Verification sent!
+        // [START_EXCLUDE]
+        alert('Email Verification Sent!');
+        // [END_EXCLUDE]
+      });
+
+         firebase.auth().onAuthStateChanged(function(user) {
+        if(user)
+        {
+          var emailVerified = user.emailVerified;
+        }
+        if (!emailVerified) {
+          alert("Please Verify your email.");
+          window.location="login.html";
+        }
+});
+      })
+
+       .catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -29,13 +59,24 @@ document.getElementById("signup").addEventListener("click", function(){
         } else {
           alert(errorMessage);
         }
-    });
-       firebase.auth().onAuthStateChanged(firebaseUser => {
-        if(firebaseUser){
-        console.log(firebaseUser);
-        window.location="login.html";
-         }
-});
+        console.log(error);
+        // [END_EXCLUDE]
+      });
+
+      // [END sendemailverification]
+      // [END sendemailverification]
+    
+
+            },false);
+      // Sign in with email and pass.
+        
+        
+      // [START createwithemail]
       
+      
+      // [START sendemailverification]
+       
       // [END createwithemail]
-    },false);
+  
+
+

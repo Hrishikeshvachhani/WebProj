@@ -36,15 +36,42 @@ document.getElementById("login").addEventListener("click", function(){
         });
         firebase.auth().onAuthStateChanged(firebaseUser => {
         if(firebaseUser){
-        console.log(firebaseUser);
-        window.location="Home.html";
-         }
-         else{
-        console.log("Authentication Failed");
-        alert("Authentication Failed");
-        
-}
+        var emailVerified = firebaseUser.emailVerified;
+          if(!emailVerified)
+           {
+           alert("Please Verify your Email");
+           }
+          else if(emailVerified)
+            {
+           window.location="Home.html";
+           }
+       }
 });
 
         // [END authwithemail]
       },false);
+
+document.getElementById("forgot").addEventListener("click", function(){
+
+      var email = document.getElementById('email').value;
+      // [START sendpasswordemail]
+      firebase.auth().sendPasswordResetEmail(email).then(function() {
+        // Password Reset Email Sent!
+        // [START_EXCLUDE]
+        alert('Password Reset Email Sent!');
+        // [END_EXCLUDE]
+      }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // [START_EXCLUDE]
+        if (errorCode == 'auth/invalid-email') {
+          alert(errorMessage);
+        } else if (errorCode == 'auth/user-not-found') {
+          alert(errorMessage);
+        }
+        console.log(error);
+        // [END_EXCLUDE]
+      });
+      // [END sendpasswordemail];
+    },false);
