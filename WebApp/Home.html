@@ -2,6 +2,30 @@
 <html>
 <head>
 <title>Study Guide</title>
+
+ <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+  <script type="text/javascript">
+    var config = {
+    apiKey: "AIzaSyDomzPTwcQtQLzn4xB4Nh3ydFGysydD_8o",
+    authDomain: "webapp-34ae0.firebaseapp.com",
+    databaseURL: "https://webapp-34ae0.firebaseio.com",
+    projectId: "webapp-34ae0",
+    storageBucket: "",
+    messagingSenderId: "518074473208"
+  };
+  firebase.initializeApp(config);
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+
+  <script type="text/javascript">
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+        if(!firebaseUser){
+          alert("To access our page you must first login.");
+           window.location="login.html";
+           }
+});
+  </script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style1.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/coin-slider.css" />
