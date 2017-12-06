@@ -18,7 +18,8 @@
   };
   firebase.initializeApp(config);
   </script>
-<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+  
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script type="text/javascript" src="glog.js"></script>
   <meta name="google-signin-client_id" content="518074473208-jia1q27qrve1gj62hrgc6ft8d58hq6lh.apps.googleusercontent.com">
@@ -26,10 +27,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Login to PROJ</title>
   <link rel="stylesheet" href="style.css">
-  <style type="text/css">
-  body {
-}
-  </style>
   
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
@@ -62,11 +59,10 @@
       </form>
     </div>
     <div class="login-help">
-      <p>Forgot your password? <a id="forgot">Click here to reset it</a>.</p>
+      <p>Forgot your password? <a id="forgot" href="">Click here to reset it</a>.</p>
       <p>Not a Member ? <a href="signup.html">Click here to Sign Up</a>.</p>
     </div>
   </section>
   <script src="authlogin.js"></script>
-  <script src="authstatelistener.js"></script>
 </body>
 </html>
