@@ -18,8 +18,7 @@
   };
   firebase.initializeApp(config);
   </script>
-  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
-
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script type="text/javascript" src="glog.js"></script>
   <meta name="google-signin-client_id" content="518074473208-jia1q27qrve1gj62hrgc6ft8d58hq6lh.apps.googleusercontent.com">
@@ -27,23 +26,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Login to PROJ</title>
   <link rel="stylesheet" href="style.css">
+  <style type="text/css">
+  body {
+}
+  </style>
   
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
   <section class="container">
+    <br>
+    <br>
     <div class="login">
       <h1>Login to Web App</h1>
       <form method="post" action="login.html">
-        <p><input type="text" name="email"  id="email" placeholder="Email"></p>
-        <p><input type="password" name="password"  id="password" placeholder="Password"></p>
+        <h6>Email <br>
+          <input type="text" name="email"  id="email" placeholder="Email">
+        </h6>
+        <h6>Password <br><input type="password" name="password"  id="password" placeholder="Password">
+        </h6>
         <p class="remember_me">
           <label>
             <input type="checkbox" name="remember_me" id="remember_me">
             Remember me.
           </label>
         </p>
-        <p><button class="submit" type="button" name="login" id="login" value="Login">Login</button>
+        <p><br>
+        </p>
+        <p>	
+        <div> 
+          <button class="submit" type="button" name="login" id="login" value="Login">Login</button>   
+        </div>
         </p>
         <div class="g-signin2" data-onsuccess="onSignIn"></div>
       </form>
@@ -52,8 +65,8 @@
       <p>Forgot your password? <a id="forgot">Click here to reset it</a>.</p>
       <p>Not a Member ? <a href="signup.html">Click here to Sign Up</a>.</p>
     </div>
-
   </section>
   <script src="authlogin.js"></script>
+  <script src="authstatelistener.js"></script>
 </body>
 </html>
