@@ -5,6 +5,29 @@
 New Event
 http://www.templatemo.com/tm-486-new-event
 -->
+<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+  <script type="text/javascript">
+    var config = {
+    apiKey: "AIzaSyDomzPTwcQtQLzn4xB4Nh3ydFGysydD_8o",
+    authDomain: "webapp-34ae0.firebaseapp.com",
+    databaseURL: "https://webapp-34ae0.firebaseio.com",
+    projectId: "webapp-34ae0",
+    storageBucket: "",
+    messagingSenderId: "518074473208"
+  };
+  firebase.initializeApp(config);
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+
+  <script type="text/javascript">
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+        if(!firebaseUser){
+          alert("To access our page you must first login.");
+           window.location="login.html";
+           }
+});
+  </script>
 <title>New Event - Responsive HTML Template</title>
 <meta name="description" content="">
 <meta name="author" content="">
