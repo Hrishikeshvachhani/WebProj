@@ -19,7 +19,7 @@
   firebase.initializeApp(config);
   </script>
   <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
-  
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script type="text/javascript" src="glog.js"></script>
   <meta name="google-signin-client_id" content="518074473208-jia1q27qrve1gj62hrgc6ft8d58hq6lh.apps.googleusercontent.com">
@@ -30,12 +30,14 @@
   
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
+<script>$(document).ready(function(){$('#page_effect').fadeIn(2000);});</script>
 <body>
+  <div id="page_effect" style="display:none;">
   <section class="container">
     <br>
     <img src="http://www.kickstart.ph/wp-content/uploads/2015/03/KICKSTART_Logo.png" width="50%">
     <br>
-    <div class="login">
+    <div class="login" >
       <h1>Login</h1>
       <form method="post" action="login.html">
         <h6>Email <br>
@@ -65,6 +67,8 @@
       <p>Not a Member ? <a href="signup.html">Click here to Sign Up</a>.</p>
     </div>
   </section>
+  </div>
+  <script>$('#password').keypress(function(event){if(event.which == 13){$('#login').click();}});</script>
   <script src="style.js"></script>
   <script src="authlogin.js"></script>
 </body>

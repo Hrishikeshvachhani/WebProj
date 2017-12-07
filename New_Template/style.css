@@ -20,7 +20,7 @@ time, mark, audio, video {
 }
 
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, nav, section{
   display: block;
 }
 
@@ -112,6 +112,9 @@ body {
 	background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+#page_effect{
+  
 }
 .container img{ 
   display:block;
