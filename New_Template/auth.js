@@ -13,4 +13,12 @@ var config = {
           alert("To access our page you must first login.");
            window.location="login.html";
            }
+           else
+           {
+            var user = firebase.auth().currentUser;
+            if(user!=null)
+            {var name=user.displayName;
+            alert("Welcome " + name);}
+          }
 });
+
