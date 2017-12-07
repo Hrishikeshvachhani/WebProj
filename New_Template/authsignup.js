@@ -1,18 +1,18 @@
 document.getElementById("signup").addEventListener("click", function(){
       
-      var username = prompt("Hello! What is your name?");
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
       var password1 = document.getElementById('password1').value;
       var auth = firebase.auth();
       var user = firebase.auth().currentUser;
+      var username = document.getElementById('username').value;
 
       var st=document.getElementsByClassName("login");
         for(var i=0;i<st.length;i++)
         {
         st[i].style.opacity=1;
         }
-        
+
       if (email.value=null) {
           alert("Please Enter email");
         }
@@ -35,6 +35,8 @@ document.getElementById("signup").addEventListener("click", function(){
 
        firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(function(){
+        var user = firebase.auth().currentUser;
+       
 
         firebase.auth().currentUser.sendEmailVerification().then(function() {
         // Email Verification sent!
@@ -46,12 +48,23 @@ document.getElementById("signup").addEventListener("click", function(){
          firebase.auth().onAuthStateChanged(function(user) {
         if(user)
         {
+          var username = document.getElementById("username").value;
           var emailVerified = user.emailVerified;
+          user.updateProfile({
+            displayName: username + " "
+        }).then(function () {
+            console.log("Updated");
+        }, function (error) {
+            console.log("Error happened");
+        });
         }
         if (!emailVerified) {
+
           alert("Please Verify your email.");
           window.location="login.html";
         }
+
+        
 });
       })
 
@@ -68,6 +81,7 @@ document.getElementById("signup").addEventListener("click", function(){
         console.log(error);
         // [END_EXCLUDE]
       });
+      
 
       // [END sendemailverification]
       // [END sendemailverification]
