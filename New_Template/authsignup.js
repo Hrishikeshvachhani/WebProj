@@ -7,6 +7,12 @@ document.getElementById("signup").addEventListener("click", function(){
       var auth = firebase.auth();
       var user = firebase.auth().currentUser;
 
+      var st=document.getElementsByClassName("login");
+        for(var i=0;i<st.length;i++)
+        {
+        st[i].style.opacity=1;
+        }
+        
       if (email.value=null) {
           alert("Please Enter email");
         }
