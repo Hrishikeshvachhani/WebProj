@@ -5,7 +5,6 @@ document.getElementById("signup").addEventListener("click", function(){
       var password1 = document.getElementById('password1').value;
       var auth = firebase.auth();
       var user = firebase.auth().currentUser;
-      var username = document.getElementById('username').value;
 
       var st=document.getElementsByClassName("login");
         for(var i=0;i<st.length;i++)
@@ -36,7 +35,7 @@ document.getElementById("signup").addEventListener("click", function(){
        firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(function(){
         var user = firebase.auth().currentUser;
-       
+        
 
         firebase.auth().currentUser.sendEmailVerification().then(function() {
         // Email Verification sent!
@@ -48,10 +47,9 @@ document.getElementById("signup").addEventListener("click", function(){
          firebase.auth().onAuthStateChanged(function(user) {
         if(user)
         {
-          var username = document.getElementById("username").value;
           var emailVerified = user.emailVerified;
           user.updateProfile({
-            displayName: username + " "
+            displayName: document.getElementById('username').value 
         }).then(function () {
             console.log("Updated");
         }, function (error) {
