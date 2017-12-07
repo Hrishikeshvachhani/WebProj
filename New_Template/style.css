@@ -125,6 +125,7 @@ body {
   margin: 0 auto;
   padding: 20px 20px 20px;
   width: 310px;
+  opacity:0.9;
   background: white;
   border-radius: 3px;
   -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -221,6 +222,7 @@ body {
   text-decoration: none;
 }
 .login-help a:hover {
+  color: black;
   text-decoration: underline;
 }
 
@@ -260,6 +262,10 @@ input[type=text]:focus, input[type=password]:focus {
   outline-offset: 0;
 }
 
+.g-signin2{
+  margin: auto;
+}
+
 button {
    margin:auto;
   padding: 0 18px;
@@ -290,7 +296,10 @@ button:active {
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
 }
-
+button:hover{
+  background="blue";
+  color="white";
+}
 .lt-ie9 input[type=text], .lt-ie9 input[type=password] {
   line-height: 34px;
 }
