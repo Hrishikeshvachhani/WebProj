@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+New Event
+http://www.templatemo.com/tm-486-new-event
+-->
+  <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+  <script src="js/auth.js"></script>
+ 
+<title>KickStart</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/owl.theme.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+
+<!-- Main css -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Google Font -->
+<link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
+
+</head>
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+
+<!-- =========================
+     PRE LOADER       
+============================== -->
+<div class="preloader">
+
+	<div><h1>Welcome to KickStart</h1></div>
+	<br><br>
+	<div class="sk-rotating-plane"></div>
+
+</div>
+
+
+<!-- =========================
+     NAVIGATION LINKS     
+============================== -->
+<div class="navbar navbar-fixed-top custom-navbar" role="navigation">
+	<div class="container">
+
+		<!-- navbar header -->
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">KickStart</a>
+		</div>
+
+		<div class="collapse navbar-collapse">
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#intro" class="smoothScroll">Intro</a></li>
+				<li><a href="#overview" class="smoothScroll">Overview</a></li>
+				<li><a href="#CareerOption" class="smoothScroll">Career Option</a></li>
+				<li><a href="#uselink" class="smoothScroll">Useful Links</a></li>
+				<li><a href="#doubt" class="smoothScroll">Any Question?</a></li>
+				<li><a href="#contact" class="smoothScroll">Contact Us</a></li>
+				<li><a href="#about" class="smoothScroll">About Us</a></li>
+			</ul>
+
+		</div>
+
+	</div>
+</div>
+
+
+<!-- =========================
+    INTRO SECTION   
+============================== -->
+<section id="intro" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12">
+				<h3 class="wow bounceIn" data-wow-delay="0.9s">Welcome To Our</h3>
+				<h1 class="wow fadeInUp" data-wow-delay="1.6s">Professional Career Guidance</h1>
+				<a href="#overview" class="btn btn-lg btn-default wow fadeInUp hidden-xs" data-wow-delay="2.3s">Get Started</a>
+				<a href="#CareerOption" class="btn btn-lg btn-danger wow fadeInUp intro2" data-wow-delay="2.3s">Career Option</a>
+			</div>
+
+
+		</div>
+	</div>
+</section>
+
+
+<!-- =========================
+    OVERVIEW SECTION   
+============================== -->
+<section id="overview" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.6s">
+				<h3>Heading</h3>
+				<p>paragraph.</p>
+			</div>
+					
+			<div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.9s">
+				<img src="images/overview-img.jpg" class="img-responsive" alt="Overview">
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- =========================
+    DETAIL SECTION   
+============================== -->
+<section id="detail" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="wow fadeInLeft col-md-4 col-sm-4" data-wow-delay="0.3s">
+				<i class="fa fa-group"></i>
+				<h3>Students</h3>
+				<p>p1</p>
+			</div>
+
+			<div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.6s">
+				<i class="fa fa-clock-o"></i>
+				<h3>Careers</h3>
+				<p>p2</p>
+			</div>
+
+			<div class="wow fadeInRight col-md-4 col-sm-4" data-wow-delay="0.9s">
+				<i class="fa fa-microphone"></i>
+				<h3>Best online portal</h3>
+				<p>p3</p>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- =========================
+    VIDEO SECTION   
+============================== -->
+<section id="video" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="wow fadeInUp col-md-6 col-sm-10" data-wow-delay="1.3s">
+				<h2>Watch Video</h2>
+				<h3>Ref career guide</h3>
+				<p>paragraph.</p>
+			</div>
+			<div class="wow fadeInUp col-md-6 col-sm-10" data-wow-delay="1.6s">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/XDPwXQjAlB0" allowfullscreen></iframe>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- =========================
+    CareerOption SECTION   
+============================== -->
+<section id="CareerOption" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12 wow bounceIn">
+				<div class="section-title">
+					<h2>Career Options</h2>
+					<p>Choose your best career option</p>
+				</div>
+			</div>
+
+			<!-- Testimonial Owl Carousel section
+			================================================== -->
+			<div id="owl-CareerOption" class="owl-carousel">
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+					<div class="CareerOption-wrapper">
+						<img src="images/CareerOption-img1.jpg" class="img-responsive" alt="CareerOption">
+							<div class="CareerOption-thumb">
+								<h3>Engineering</h3>
+								<h6></h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.6s">
+					<div class="CareerOption-wrapper">
+						<img src="images/CareerOption-img2.jpg" class="img-responsive" alt="CareerOption">
+							<div class="CareerOption-thumb">
+								<h3>Medical</h3>
+								<h6></h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+					<div class="CareerOption-wrapper">
+						<img src="images/CareerOption-img1.jpg" class="img-responsive" alt="CareerOption">
+							<div class="CareerOption-thumb">
+								<h3>Commerce</h3>
+								<h6></h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+					<div class="CareerOption-wrapper">
+						<img src="images/CareerOption-img1.jpg" class="img-responsive" alt="CareerOption">
+							<div class="CareerOption-thumb">
+								<h3>Arts</h3>
+								<h6></h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+					<div class="CareerOption-wrapper">
+						<img src="images/CareerOption-img1.jpg" class="img-responsive" alt="CareerOption">
+							<div class="CareerOption-thumb">
+								<h3>Personal Hobbies</h3>
+								<h6></h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+					<div class="CareerOption-wrapper">
+						<img src="images/CareerOption-img1.jpg" class="img-responsive" alt="CareerOption">
+							<div class="CareerOption-thumb">
+								<h3>Law</h3>
+								<h6></h6>
+							</div>
+					</div>
+				</div>
+				
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+					<div class="CareerOption-wrapper">
+						<img src="images/CareerOption-img1.jpg" class="img-responsive" alt="CareerOption">
+							<div class="CareerOption-thumb">
+								<h3>Management</h3>
+								<h6></h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+					<div class="CareerOption-wrapper">
+						<img src="images/CareerOption-img1.jpg" class="img-responsive" alt="CareerOption">
+							<div class="CareerOption-thumb">
+								<h3>Public Admin &amp; Gov. Sector</h3>
+								<h6></h6>
+							</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- =========================
+    uselink SECTION   
+============================== -->
+<section id="uselink" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="wow fadeInUp col-md-12 col-sm-12" data-wow-delay="0.6s">
+				<div class="section-title">
+					<h2>Useful Links</h2>
+					<p>paragraph</p>
+				</div>
+			</div>
+
+			<div class="wow fadeInUp col-md-10 col-sm-10" data-wow-delay="0.9s">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="active"><a href="#fday" aria-controls="fday" role="tab" data-toggle="tab">Web Link</a></li>
+					<li><a href="#sday" aria-controls="sday" role="tab" data-toggle="tab">Video Link</a></li>
+					<li><a href="#tday" aria-controls="tday" role="tab" data-toggle="tab">Courses Link</a></li>
+				</ul>
+				<!-- tab panes -->
+				<div class="tab-content">
+
+					<div role="tabpanel" class="tab-pane active" id="fday">
+						<!-- uselink speaker here -->
+						<div class="col-md-2 col-sm-2">
+							<img src="images/uselink-img1.jpg" class="img-responsive" alt="uselink">
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<h6>
+								<span><i class="fa fa-clock-o"></i> 09.00 AM</span> 
+								<span><i class="fa fa-map-marker"></i> Room 240</span>
+							</h6>
+							<h3>Introduction to Design</h3>
+							<h4>By Jenny Green</h4>
+							<p>Maecenas accumsan metus turpis, eu faucibus ligula interdum in. Mauris at tincidunt felis, vitae aliquam magna. Sed aliquam fringilla vestibulum.</p>
+						</div>
+
+						<!-- uselink divider -->
+						<div class="uselink-divider col-md-12 col-sm-12"></div>
+
+						<!-- uselink speaker here -->
+						<div class="col-md-2 col-sm-2">
+							<img src="images/uselink-img2.jpg" class="img-responsive" alt="uselink">
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<h6>
+								<span><i class="fa fa-clock-o"></i> 10.00 AM</span> 
+								<span><i class="fa fa-map-marker"></i> Room 360</span>
+							</h6>
+							<h3>Front-End Development</h3>
+							<h4>By Johnathan Mark</h4>
+							<p>Mauris at tincidunt felis, vitae aliquam magna. Sed aliquam fringilla vestibulum. Praesent ullamcorper mauris fermentum turpis scelerisque rutrum eget eget turpis.</p>
+						</div>
+
+						<!-- uselink divider -->
+						<div class="uselink-divider col-md-12 col-sm-12"></div>
+
+						<!-- uselink speaker here -->
+						<div class="col-md-2 col-sm-2">
+							<img src="images/uselink-img3.jpg" class="img-responsive" alt="uselink">
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<h6>
+								<span><i class="fa fa-clock-o"></i> 11.00 AM</span> 
+								<span><i class="fa fa-map-marker"></i> Room 450</span>
+							</h6>
+							<h3>Social Media Marketing</h3>
+							<h4>By Johnathan Doe</h4>
+							<p>Nam pulvinar, elit vitae rhoncus pretium, massa urna bibendum ex, aliquam efficitur lorem odio vitae erat. Integer rutrum viverra magna, nec ultrices risus rutrum nec.</p>
+						</div>
+					</div>
+
+					<div role="tabpanel" class="tab-pane" id="sday">
+						<!-- uselink speaker here -->
+						<div class="col-md-2 col-sm-2">
+							<img src="images/uselink-img4.jpg" class="img-responsive" alt="uselink">
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<h6>
+								<span><i class="fa fa-clock-o"></i> 11.00 AM</span> 
+								<span><i class="fa fa-map-marker"></i> Room 240</span>
+							</h6>
+							<h3>Backend Development</h3>
+							<h4>By Matt Lee</h4>
+							<p>Integer rutrum viverra magna, nec ultrices risus rutrum nec. Pellentesque interdum vel nisi nec tincidunt. Quisque facilisis scelerisque venenatis. Nam vulputate ultricies luctus.</p>
+						</div>
+
+						<!-- uselink divider -->
+						<div class="uselink-divider col-md-12 col-sm-12"></div>
+
+						<!-- uselink speaker here -->
+						<div class="col-md-2 col-sm-2">
+							<img src="images/uselink-img5.jpg" class="img-responsive" alt="uselink">
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<h6>
+								<span><i class="fa fa-clock-o"></i> 01.00 PM</span> 
+								<span><i class="fa fa-map-marker"></i> Room 450</span>
+							</h6>
+							<h3>Web Application Lite</h3>
+							<h4>By David Orlando</h4>
+							<p>Aliquam faucibus lobortis dolor, id pellentesque eros pretium in. Aenean in erat ut quam aliquet commodo. Vivamus aliquam pulvinar ipsum ut sollicitudin. Suspendisse quis sollicitudin mauris.</p>
+						</div>
+
+						<!-- uselink divider -->
+						<div class="uselink-divider col-md-12 col-sm-12"></div>
+
+						<!-- uselink speaker here -->
+						<div class="col-md-2 col-sm-2">
+							<img src="images/uselink-img6.jpg" class="img-responsive" alt="uselink">
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<h6>
+								<span><i class="fa fa-clock-o"></i> 03.00 PM</span> 
+								<span><i class="fa fa-map-marker"></i> Room 650</span>
+							</h6>
+							<h3>Professional UX Design</h3>
+							<h4>By James Lee Mark</h4>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
+						</div>
+					</div>
+
+					<div role="tabpanel" class="tab-pane" id="tday">
+						<!-- uselink speaker here -->
+						<div class="col-md-2 col-sm-2">
+							<img src="images/uselink-img7.jpg" class="img-responsive" alt="uselink">
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<h6>
+								<span><i class="fa fa-clock-o"></i> 03.00 PM</span> 
+								<span><i class="fa fa-map-marker"></i> Room 750</span>
+							</h6>
+							<h3>Online Shopping Business</h3>
+							<h4>By Michael Walker</h4>
+							<p>Aliquam faucibus lobortis dolor, id pellentesque eros pretium in. Aenean in erat ut quam aliquet commodo. Vivamus aliquam pulvinar ipsum ut sollicitudin. Suspendisse quis sollicitudin mauris.</p>
+						</div>
+
+						<!-- uselink divider -->
+						<div class="uselink-divider col-md-12 col-sm-12"></div>
+
+						<!-- uselink speaker here -->
+						<div class="col-md-2 col-sm-2">
+							<img src="images/uselink-img8.jpg" class="img-responsive" alt="uselink">
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<h6>
+								<span><i class="fa fa-clock-o"></i> 05.00 PM</span> 
+								<span><i class="fa fa-map-marker"></i> Room 850</span>
+							</h6>
+							<h3>Introduction to Mobile App</h3>
+							<h4>By Cherry Stella</h4>
+							<p>Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
+						</div>
+
+						<!-- uselink divider -->
+						<div class="uselink-divider col-md-12 col-sm-12"></div>
+
+						<!-- uselink speaker here -->
+						<div class="col-md-2 col-sm-2">
+							<img src="images/uselink-img9.jpg" class="img-responsive" alt="uselink">
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<h6>
+								<span><i class="fa fa-clock-o"></i> 07.00 PM</span> 
+								<span><i class="fa fa-map-marker"></i> Room 750</span>
+							</h6>
+							<h3>Bootstrap UI Design</h3>
+							<h4>By John David</h4>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
+						</div>
+					</div>
+
+				</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- =========================
+   Doubt SECTION   
+============================== -->
+<section id="doubt" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="0.6s">
+				<h2>Do you have any Questions?</h2>
+				<h3>Ask to us anytime.</h3>
+				<p>Feel free to contact us anytime. Ask us the questions you have in your mind and we will try to answe it!!</p>
+			</div>
+
+			<div class="wow fadeInUp col-md-5 col-sm-5" data-wow-delay="1s">
+				<form action="#" method="post">
+					
+					<input name="phone" type="telephone" class="form-control" id="phone" placeholder="Title">
+					<input name="email" type="textarea" class="form-control" id="email" placeholder="Write Your Question Here">
+					<div class="col-md-offset-6 col-md-6 col-sm-offset-1 col-sm-10">
+						<input name="submit" type="submit" class="form-control" id="submit" value="SEND">
+					</div>
+				</form>
+			</div>
+
+			<div class="col-md-1"></div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- =========================
+    FAQ SECTION   
+============================== -->
+<section id="faq" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<!-- Section title
+			================================================== -->
+			<div class="wow bounceIn col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 text-center">
+				<div class="section-title">
+					<h2>Top Question-Answer Feeds</h2>
+					<p>What is the scope of BBA programme for science students?</p>
+				<p>With around 15 lakh students appearing for board the idea of choosing a graduation degree with limited number of seats available sems bizarre. BBA is a degree possible for sudents of any stream and students can use grade 12 subjects to their benefit whle being placed. For instance,a student with strong mathematics can very well work with data analytics xompany after bba.</p>
+				
+				</div>
+			</div>
+
+			<div class="wow fadeInUp col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10" data-wow-delay="0.9s">
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+  					<div class="panel panel-default">
+   						<div class="panel-heading" role="tab" id="headingOne">
+      						<h4 class="panel-title">
+        						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          							 What is Responsive Design?
+        						</a>
+      						</h4>
+    					</div>
+   						<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      						<div class="panel-body">
+        						<p>Is colege a necessity for fashion designing?</p>
+								<p>Yes its as important as studying ur boards.
+its an extremely professional and growing industry which requires professionals.
+a company won't hire u through online courses u take. if u want to own ur boutique then u might not. but its always good to join an institutions as fashion designing has lots to do with the market so marketing,merchandising,etc also u have to know about how fashion evolved its history, forecast etc so i'll suggest u tojoin an institution </p>
+      						</div>
+   						 </div>
+ 					</div>
+
+    				<div class="panel panel-default">
+   						<div class="panel-heading" role="tab" id="headingTwo">
+      						<h4 class="panel-title">
+        						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          							What are latest UX Developments?
+        						</a>
+      						</h4>
+    					</div>
+   						<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      						<div class="panel-body">
+                            	<p>Which sector has good scope in India:Animation,Multimedia or VFX</p>
+				<p>From my point of view multimedia is much better than two others because it has too many growing chances, it has vast career opportunity, having good chances & option to enhance our skills, personality. i will suggest MULTIMEDIA </p>
+      						</div>
+   						 </div>
+ 					</div>
+
+ 					<div class="panel panel-default">
+   						<div class="panel-heading" role="tab" id="headingThree">
+      						<h4 class="panel-title">
+        						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          							What things about Social Media will be discussed?
+        						</a>
+      						</h4>
+    					</div>
+   						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      						<div class="panel-body">
+                            	<p>Best Comic design colleges</p>
+        						<p>To name more, we have:
+								IMAGE Institute of Multimedia, Animation & Graphic Effects
+									Pickles Animation
+								Reliance BIG AIMS
+								TGC Animation & Multimedia </p>
+      						</div>
+   						 </div>
+ 					 </div>
+
+ 				 </div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+
+
+<!-- =========================
+    CONTACT SECTION   
+============================== -->
+<section id="contact" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="wow fadeInUp col-md-offset-1 col-md-5 col-sm-6" data-wow-delay="0.6s">
+				<div class="contact_des">
+					<h3>New Event</h3>
+					<p>Proin sodales convallis urna eu condimentum. Morbi tincidunt augue eros, vitae pretium mi condimentum eget. Suspendisse eu turpis sed elit pretium congue.</p>
+					<p>Mauris at tincidunt felis, vitae aliquam magna. Sed aliquam fringilla vestibulum. Praesent ullamcorper mauris fermentum turpis scelerisque rutrum eget eget turpis.</p>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat. Lorem ipsum dolor.</p>
+					<a href="#" class="btn btn-danger">DOWNLOAD NOW</a>
+				</div>
+			</div>
+
+			<div class="wow fadeInUp col-md-5 col-sm-6" data-wow-delay="0.9s">
+				<div class="contact_detail">
+					<div class="section-title">
+						<h2>Keep in touch</h2>
+					</div>
+					<form action="#" method="post">
+						<input name="name" type="text" class="form-control" id="name" placeholder="Name">
+					  	<input name="email" type="email" class="form-control" id="email" placeholder="Email">
+					  	<textarea name="message" rows="5" class="form-control" id="message" placeholder="Message"></textarea>
+						<div class="col-md-6 col-sm-10">
+							<input name="submit" type="submit" class="form-control" id="submit" value="SEND">
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<section id="about" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12 wow bounceIn">
+				<div class="section-title">
+					<h2>Our Team</h2>
+					<p>Thanks to all team members for their greate support.</p>
+				</div>
+			</div>
+
+			<!-- Testimonial Owl Carousel section
+			================================================== -->
+			<div id="owl-about" class="owl-carousel">
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+					<div class="about-wrapper">
+						<img src="images/about-img1.jpg" class="img-responsive" alt="about">
+							<div class="CareerOption-thumb">
+								<h3>Pandya Prahar</h3>
+								<h6></h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.6s">
+					<div class="about-wrapper">
+						<img src="images/about-img2.jpg" class="img-responsive" alt="about">
+							<div class="about-thumb">
+								<h3>Hrishikesh Vachhani</h3>
+								<h6></h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+					<div class="about-wrapper">
+						<img src="images/about-img1.jpg" class="img-responsive" alt="about">
+							<div class="about-thumb">
+								<h3>Karansingh Chauhan</h3>
+								<h6></h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+					<div class="about-wrapper">
+						<img src="images/about-img1.jpg" class="img-responsive" alt="about">
+							<div class="about-thumb">
+								<h3>Shivangi Bhatt</h3>
+								<h6></h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+					<div class="about-wrapper">
+						<img src="images/about-img1.jpg" class="img-responsive" alt="about">
+							<div class="about-thumb">
+								<h3>Aditya Wadhwan</h3>
+								<h6></h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+					<div class="about-wrapper">
+						<img src="images/about-img1.jpg" class="img-responsive" alt="about">
+							<div class="about-thumb">
+								<h3>Meshwa Patel</h3>
+								<h6></h6>
+							</div>
+					</div>
+				</div>
+				
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+					<div class="about-wrapper">
+						<img src="images/about-img1.jpg" class="img-responsive" alt="about">
+							<div class="about-thumb">
+								<h3>Dhruv Patel</h3>
+								<h6></h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+					<div class="about-wrapper">
+						<img src="images/about-img1.jpg" class="img-responsive" alt="about">
+							<div class="about-thumb">
+								<h3>Ankita Nath</h3>
+								<h6></h6>
+							</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- =========================
+    FOOTER SECTION   
+============================== -->
+<footer>
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12">
+				<p class="wow fadeInUp" data-wow-delay="0.6s">Thanks for visiting our site.</p>
+			</div>
+			
+		</div>
+	</div>
+</footer>
+
+
+<!-- Back top -->
+<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+
+<!-- =========================
+     SCRIPTS   
+============================== -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
