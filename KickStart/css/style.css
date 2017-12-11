@@ -13,6 +13,15 @@ body {
 		font-weight: 400;
 }
 
+.borderless td, .borderless th {
+    border: none !important;
+}
+
+#CompEng {
+  background: #f9f9f9;
+    background-size: cover;
+    background-position: center center;
+}
 
 /*---------------------------------------
     Typorgraphy              
@@ -64,7 +73,7 @@ a {
 }
 
 #overview,
-#doubt {
+#doubt,#CompEng,#MechEng {
   padding-top: 14rem;
   padding-bottom: 14rem;
 }
@@ -72,7 +81,7 @@ a {
 #detail, #video,
 #CareerOption, #about, 
 #uselink, 
-#contact, footer {
+#contact,#CompEng,#MechEng footer {
     padding-top: 10rem;
     padding-bottom: 10rem;
 }
@@ -86,7 +95,7 @@ footer {
 #overview h3,
 #detail h3, #video h3,
 #doubt h3,
-#contact h3 {
+#contact h3,#CompEng h3 ,#MechEng h3 {
     padding-bottom: 12px;
 }
 
