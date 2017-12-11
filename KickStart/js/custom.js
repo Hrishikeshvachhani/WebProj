@@ -34,11 +34,7 @@ $(document).ready(function() {
     -----------------------------------------------*/
   function initParallax() {
     $('#intro').parallax("100%", 0.1);
-    $('#overview').parallax("100%", 0.3);
-    $('#detail').parallax("100%", 0.2);
-    $('#video').parallax("100%", 0.3);
     $('#CareerOption').parallax("100%", 0.1);
-    $('#uselink').parallax("100%", 0.2);
     $('#doubt').parallax("100%", 0.1);
     $('#faq').parallax("100%", 0.3);
     $('#contact').parallax("100%", 0.2);
