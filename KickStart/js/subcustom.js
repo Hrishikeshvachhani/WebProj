@@ -28,8 +28,31 @@ $(document).ready(function() {
         $(".navbar-collapse").collapse('hide');
     });
 
-    
+    function drop() {
+      // body...
+    $('.dropdown-toggle').dropdown();
+    $('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+        e.stopPropagation();
+    });
+  }
+  drop();
 
+$( ".acom1" ).mouseover(function() {
+  $(".vcom").addClass("hidden");
+  $(".com1").removeClass("hidden");
+});    
+$( ".acom1" ).mouseout(function() {
+  $(".vcom").removeClass("hidden");
+  $(".com1").addClass("hidden");
+}); 
+$( ".acom2" ).mouseover(function() {
+  $(".vcom").addClass("hidden");
+  $(".com2").removeClass("hidden");
+});    
+$( ".acom2" ).mouseout(function() {
+  $(".vcom").removeClass("hidden");
+  $(".com2").addClass("hidden");
+}); 
  /* Parallax section
     -----------------------------------------------*/
   function initParallax() {
@@ -42,17 +65,12 @@ $(document).ready(function() {
   initParallax();
 
 function scrollmenu(){ 
-$('ul.nav').find('a').click(function(){
-    var $href = $(this).attr('href');
-    var $anchor = $($href).offset();
-    window.scrollTo($anchor.left,$anchor.top);
-    return false;
-});
-$('#intro2').click(function(){
-    var $href = $(this).attr('href');
-    var $anchor = $($href).offset();
-    window.scrollTo($anchor.left,$anchor.top);
-    return false;
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
 });
 }
 scrollmenu();

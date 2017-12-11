@@ -44,17 +44,12 @@ $(document).ready(function() {
   initParallax();
 
 function scrollmenu(){ 
-$('ul.nav').find('a').click(function(){
-    var $href = $(this).attr('href');
-    var $anchor = $($href).offset();
-    window.scrollTo($anchor.left,$anchor.top);
-    return false;
-});
-$('#intro2').click(function(){
-    var $href = $(this).attr('href');
-    var $anchor = $($href).offset();
-    window.scrollTo($anchor.left,$anchor.top);
-    return false;
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
 });
 }
 scrollmenu();
