@@ -8,38 +8,43 @@ http://www.templatemo.com/tm-486-new-event
   <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
   <script src="js/auth.js"></script>
  
 <title>KickStart</title>
 <meta name="description" content="">
 <meta name="author" content="">
-<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+<meta charset="UTF-8">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <link rel="stylesheet" href="css/owl.theme.css">
 <link rel="stylesheet" href="css/owl.carousel.css">
-
+<link rel="stylesheet" href="css/loadstyle.css">
 <!-- Main css -->
 <link rel="stylesheet" href="css/style.css">
 
-<!-- Google Font -->
-<link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
-
 </head>
-<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 <!-- =========================
      PRE LOADER       
 ============================== -->
 <div class="preloader">
 
-	<div><h1>Welcome to KickStart</h1></div>
-	<br><br>
-	<div class="sk-rotating-plane"></div>
+	
+	<img src="images/Capture.jpg">
+	<div class="cube-wrapper" style="margin-top: 150px; margin-left: 5px;">
+  <div class="cube-folding">
+    <span class="leaf1"></span>
+    <span class="leaf2"></span>
+    <span class="leaf3"></span>
+    <span class="leaf4"></span>
+  </div>
+</div>
+	
 
 </div>
 
@@ -48,30 +53,32 @@ http://www.templatemo.com/tm-486-new-event
      NAVIGATION LINKS     
 ============================== -->
 <div class="navbar navbar-fixed-top custom-navbar" role="navigation">
-	<div class="container">
+	<div class="container-fluid">
 
 		<!-- navbar header -->
-		<div class="navbar-header">
-			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="icon icon-bar"></span>
-				<span class="icon icon-bar"></span>
-				<span class="icon icon-bar"></span>
-			</button>
-			<a href="#" class="navbar-brand">KickStart</a>
-		</div>
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand"><img src="images/loader.png" style="width: 20%; padding-left: 40px; padding-top: 12px;"></a>
+    </div>
 
-		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right navbar-pills">
 
-			<ul class="nav navbar-nav navbar-right nav-pills">
 				<li><a href="#intro" class="smoothScroll">Intro</a></li>
 				<li role="presentation" class="dropdown">
-   					 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+   					 <a class="dropdown-toggle smoothScroll" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
   					    Career Options <span class="caret"></span></a>
    					<ul class="dropdown-menu">
+   						<li><a href="#CareerOption" class="smoothScroll">Career Optios</a></li>
       					<li><a href="#CompEng" class="smoothScroll">Engineering</a></li>
 						<li><a href="#MechEng" class="smoothScroll">Medical</a></li>
 						<li><a href="#MechEng" class="smoothScroll">Commerce</a></li>
-						<li><a href="#MechEng" class="smoothScroll">Arts</a></li>
+						<li><a href="#MechEng" sclass="smoothScroll">Arts</a></li>
 						<li><a href="#MechEng" class="smoothScroll">Medical</a></li>
 						<li><a href="#MechEng" class="smoothScroll">Law</a></li>
 						<li><a href="#MechEng" class="smoothScroll">Management</a></li>
@@ -81,12 +88,28 @@ http://www.templatemo.com/tm-486-new-event
 				<li><a href="#doubt" class="smoothScroll">Any Question?</a></li>
 				<li><a href="#contact" class="smoothScroll">Contact Us</a></li>
 				<li><a href="#about" class="smoothScroll">About Us</a></li>
-			</ul>
+				<li><p id="textelement" style="padding-left: 30px; padding-top: 18px; padding-right: 30px; text-transform: uppercase;"></p></li>
+          <li><button type="button" id="signout" class="btn btn-info navbar-btn" style="padding-top: 10px;">Sign Out</button></li>
+          <script type="text/javascript">
+				var signout=document.getElementById("signout");
+signout.addEventListener("click",function(){
+  firebase.auth().signOut().then(function() {
+    alert("successfully SignOut");
+  // Sign-out successful.
+}).catch(function(error) {
+  alert("Error occur.Please Try Again.")
+  // An error happened.
+});
+},false);</script>
+			</ul> 
+		
 
 		</div>
 
 	</div>
-</div>
+
+			
+		</div>
 
 
 <!-- =========================
@@ -99,7 +122,7 @@ http://www.templatemo.com/tm-486-new-event
 			<div class="col-md-12 col-sm-12">
 				<h3 class="wow bounceIn" data-wow-delay="0.9s">Welcome To Our</h3>
 				<h1 class="wow fadeInUp" data-wow-delay="1.6s">Professional Career Guidance</h1>
-				<a href="#CareerOption" class="btn btn-lg btn-danger wow fadeInUp intro2" data-wow-delay="2.3s">Career Option</a>
+				<a href="#CareerOption" class="btn btn-lg btn-danger wow fadeInUp" data-wow-delay="2.3s">Career Option</a>
 			</div>
 
 
@@ -226,8 +249,8 @@ http://www.templatemo.com/tm-486-new-event
 			<div class="wow fadeInUp col-md-5 col-sm-5" data-wow-delay="1s">
 				<form action="#" method="post">
 					
-					<input name="phone" type="telephone" class="form-control" id="phone" placeholder="Title">
-					<input name="email" type="textarea" class="form-control" id="email" placeholder="Write Your Question Here">
+					<input name="phone" type="telephone" class="form-control" id="title" placeholder="Title">
+					<input name="email" type="textarea" class="form-control" id="ques" placeholder="Write Your Question Here">
 					<div class="col-md-offset-6 col-md-6 col-sm-offset-1 col-sm-10">
 						<input name="submit" type="submit" class="form-control" id="submit" value="SEND">
 					</div>
@@ -257,7 +280,7 @@ http://www.templatemo.com/tm-486-new-event
 				</div>
 			</div>
 
-			<div class="wow fadeInUp col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10" data-wow-delay="0.9s">
+			<div class="wow fadeInUp col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 sm" data-wow-delay="0.9s">
 				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
 					<div class="panel panel-default">
@@ -323,35 +346,29 @@ a company won't hire u through online courses u take. if u want to own ur boutiq
 ============================== -->
 <section id="contact" class="parallax-section">
 	<div class="container">
-		<div class="row">
-
-			<div class="wow fadeInUp col-md-offset-1 col-md-5 col-sm-6" data-wow-delay="0.6s">
-				<div class="contact_des">
-					<h3>Contact Us</h3>
-					<p>Proin sodales convallis urna eu condimentum. Morbi tincidunt augue eros, vitae pretium mi condimentum eget. Suspendisse eu turpis sed elit pretium congue.</p>
-					<p>Mauris at tincidunt felis, vitae aliquam magna. Sed aliquam fringilla vestibulum. Praesent ullamcorper mauris fermentum turpis scelerisque rutrum eget eget turpis.</p>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat. Lorem ipsum dolor.</p>
+			<div class="row">
+			<div class="wow fadeInUp col-md-offset-0" data-wow-delay="0.6s">
+				<div class="contact_des" style="text-align: center;">
+					<h2>Contact Us</h2>
+					<p>For any developer issue,Contact us any time.</p>
+					<br><br>
 				</div>
 			</div>
-
-			<div class="wow fadeInUp col-md-5 col-sm-6" data-wow-delay="0.9s">
-				<div class="contact_detail">
-					<div class="section-title">
-						<h2>Keep in touch</h2>
-					</div>
-					<form action="#" method="post">
-						<input name="name" type="text" class="form-control" id="name" placeholder="Name">
-					  	<input name="email" type="email" class="form-control" id="email" placeholder="Email">
-					  	<textarea name="message" rows="5" class="form-control" id="message" placeholder="Message"></textarea>
-						<div class="col-md-6 col-sm-10">
-							<input name="submit" type="submit" class="form-control" id="submit" value="SEND">
-						</div>
-					</form>
-				</div>
-			</div>
-
 		</div>
-	</div>
+			<div class="row">
+					<div class="wow fadeInUp col-md-offset-1 col-md-3 col-sm-4" data-wow-delay="0.6s">
+					<a href = "mailto:pandyaprahar401@gmail.com"><img src="images/prahar.jpg" style="border-radius: 50%;width: 50%; height: 50%;"></a>
+					<br><br>
+				</div>
+					<div class="wow fadeInUp col-md-offset-1 col-md-3 col-sm-4" data-wow-delay="0.6s">
+					<a href = "mailto:hrishikeshvachhani@gmail.com"><img src="images/prahar.jpg" style="border-radius: 50%;width: 50%; height: 50%;"></a>
+				</div>
+				<div class="wow fadeInUp col-md-offset-1 col-md-3 col-sm-4" data-wow-delay="0.6s">
+					<a href = "mailto:c2karansingh@gmail.com"><img src="images/prahar.jpg" style="border-radius: 50%;width: 50%; height: 50%;"></a>
+					<br><br>
+				</div>
+			</div>
+		</div>
 </section>
 
 <section id="about" class="parallax-section">
@@ -371,7 +388,7 @@ a company won't hire u through online courses u take. if u want to own ur boutiq
 
 				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
 					<div class="about-wrapper">
-						<img src="images/about-img1.jpg" class="img-responsive" alt="about">
+						<img src="images/prahar.jpg" class="img-responsive" alt="about">
 							<div class="CareerOption-thumb">
 								<h3>Pandya Prahar</h3>
 							</div>
@@ -411,7 +428,7 @@ a company won't hire u through online courses u take. if u want to own ur boutiq
 					<div class="about-wrapper">
 						<img src="images/about-img1.jpg" class="img-responsive" alt="about">
 							<div class="about-thumb">
-								<h3>Aditya Wadhawan</h3>
+								<h3>Aditya Wadhwan</h3>
 								<h6>Blings and glams!</h6>
 							</div>
 					</div>
@@ -444,10 +461,14 @@ a company won't hire u through online courses u take. if u want to own ur boutiq
 							</div>
 					</div>
 				</div>
+
 			</div>
 
 		</div>
 	</div>
+	<br>
+				<br>
+				<br><br><br><br>
 </section>
 <!-- =========================
     FOOTER SECTION   
@@ -461,12 +482,15 @@ a company won't hire u through online courses u take. if u want to own ur boutiq
 			</div>
 			
 		</div>
+		<div class="row"></div>
+			<div class="row"></div>
+				<div class="row"></div>
 	</div>
 </footer>
 
 
 <!-- Back top -->
-<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+<a href="#back-top" class="go-top"><i class="fa fa-angle-double-up"></i></a>
 
 
 <!-- =========================
@@ -479,6 +503,5 @@ a company won't hire u through online courses u take. if u want to own ur boutiq
 <script src="js/smoothscroll.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/custom.js"></script>
-
 </body>
 </html>
