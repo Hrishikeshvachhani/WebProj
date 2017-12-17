@@ -2,7 +2,7 @@
  /* jQuery Pre loader
   -----------------------------------------------*/
 $(window).load(function(){
-    $('.preloader').fadeOut(1000); // set duration in brackets    
+    $('.preloader').fadeOut(6000); // set duration in brackets    
 });
 
 
@@ -36,23 +36,21 @@ $(document).ready(function() {
     $('#intro').parallax("100%", 0.1);
     $('#CareerOption').parallax("100%", 0.1);
     $('#doubt').parallax("100%", 0.1);
-    $('#faq').parallax("100%", 0.3);
-    $('#contact').parallax("100%", 0.2);
+    $('#faq').parallax("100%", 0.1);
+    $('#contact').parallax("100%", 0.1);
     $('#about').parallax("100%", 0.1);
-
   }
   initParallax();
 
-function scrollmenu(){ 
-$(document).on('click', 'a[href^="#"]', function (event) {
+$('ul.nav').find('a').click(function (event) {
     event.preventDefault();
 
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 500);
 });
-}
-scrollmenu();
+
+
   /* Owl Carousel
   -----------------------------------------------*/
   $(document).ready(function() {
