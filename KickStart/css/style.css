@@ -8,7 +8,7 @@ http://www.templatemo.com/tm-486-new-event
 
 body {
 		background: #ffffff;
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
     font-style: normal;
 		font-weight: 400;
 }
@@ -21,6 +21,9 @@ body {
   background: #f9f9f9;
     background-size: cover;
     background-position: center center;
+}
+.hidden{
+  visibility: hidden;
 }
 
 /*---------------------------------------
@@ -117,7 +120,7 @@ footer {
 
 #intro .btn-danger,
 #contact .btn-danger {
-    background: #f2545f;
+    background: #c33538;
     border-color: transparent;
 }
 
@@ -126,9 +129,9 @@ footer {
 }
 
 #intro .btn-danger:hover {
-  background: transparent;
+  background: white;
   border-color: #ffffff;
-  color: #ffffff;
+  color: black;
 }
 
 #contact .btn-danger:hover {
@@ -152,25 +155,29 @@ footer {
     Preloader section              
 -----------------------------------------*/
 .preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 99999;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
+  position: fixed ;
+  width: 100% ;
+  height: 100% ;
+  z-index: 99999 ;
+  display: flex ;
+  flex-flow: row nowrap ;
+  justify-content: center ;
   align-items: center;
-  background: none repeat scroll 0 0 #ffffff;
+  background: none repeat scroll 0 0 #ffffff ;
+}
+.preloader img{
+  width: 50%;
+  height: 30%;
 }
 
 .sk-rotating-plane {
+  margin-left: 20px;
+  margin-top: 120px;
   width: 50px;
   height: 50px;
   background-color: #222;
-  -webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
-          animation: sk-rotatePlane 1.2s infinite ease-in-out; }
+  -webkit-animation: sk-rotatePlane 1s infinite ease-in-out;
+          animation: sk-rotatePlane 1s infinite ease-in-out; }
 
 @-webkit-keyframes sk-rotatePlane {
   0% {
@@ -199,69 +206,75 @@ footer {
 /*---------------------------------------
     Navigation Links section              
 -----------------------------------------*/
+
 .custom-navbar {
     margin-bottom: 0;
-    background-color: #101010;
+    background-color: white;
+    box-shadow: 20px;
 }
-
+.navbar-right{
+  padding-right: 80px;
+}
 .custom-navbar .navbar-brand {
-    color: #ffffff;
+    color: black;
     font-weight: 600;
-    font-size: 3rem;
-    line-height: 40px;
+    font-size: 4rem;
+    line-height: 30px;
 }
 
 .custom-navbar .nav li a {
-    color: #ddd;
-    font-size: 12px;
+    color: black;
+    font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.6px;
     text-transform: uppercase;
-    line-height: 40px;
+    line-height: 30px;
     transition: all 0.4s ease-in-out;
 }
 
 .custom-navbar .nav li a:hover {
-    background: transparent;
-    color: #66ccff;
+    
+    color: blue;
 }
 
-.custom-navbar .navbar-nav > li > a:hover,
-.custom-navbar .navbar-nav > li > a:focus {
-  background-color: transparent;
+.custom-navbar .navbar-nav > li > a:hover {
+  background-color: #94b7ef;
+  color: white;
+}
+.custom-navbar .navbar-nav > li > a:focus{
+  color: red;
 }
 
 .custom-navbar .nav li.active > a {
-    background-color: transparent;
-    color: #66ccff;
+    
+    color: #ffffff;
 }
 
 .custom-navbar .navbar-toggle {
-    border: none;
+    border: 10px;
     padding-top: 10px;
 }
 
 .custom-navbar .navbar-toggle {
-    background-color: transparent;
-}
+    background-color: white;
+    opacity: 0.6}
 
 .custom-navbar .navbar-toggle .icon-bar {
-    background: #ffffff;
-    border-color: transparent;
+    background: black;
+    border-color: 5px solid  white;
 }
 
-@media(min-width:768px) {
+@media(min-width:400px) {
     .custom-navbar {
-        padding: 20px 0;
-        border-bottom: 0;
-        background: 0 0; 
+        padding: 0;
+        border-bottom: 20px;
     }
     .custom-navbar.top-nav-collapse {
-        background: #101010;
+        background: white;
         padding: 0;
     }
-
 }
+
 
 
 
@@ -269,11 +282,11 @@ footer {
     Intro section              
 -----------------------------------------*/
 #intro {
-    background: url('../images/intro-bg.jpg') 50% 0 repeat-y fixed;
+    background: url('../images/intro-bg.jpg') 50% 0 repeat-y fixed !important;
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
-    color: #ffffff;
+    color: black;
     display: -webkit-box;
     display: -webkit-flex;
      display: -ms-flexbox;
@@ -613,7 +626,7 @@ footer {
 }
 
 .go-top:hover {
-    background: #f2545f;
+    background: #c33538;
     color: #ffffff;
 }
 
@@ -660,7 +673,7 @@ footer {
   p {font-size: 13px;}
 
   .custom-navbar .navbar-brand {
-    font-size: 2rem;
+ 
   }
 
   .custom-navbar .nav li a {

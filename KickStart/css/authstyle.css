@@ -23,40 +23,27 @@ body {
   font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
   color: #404040;
   background-image: url("../images/intro-bg.jpg");
-	background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: fill;
   background-position: center;
 }
 #page_effect{
   
 }
-.container1 img{ 
+.container img, .container1 img{ 
   display:block;
     margin:auto;
-}
-.container img{ 
-  display:block;
-    margin:auto;
-	position:relative;
-	left:350px;
-  
-}
-.flex-container {
-  display: flex;
-  position:relative;
-  flex-direction: row;
-  width:200%;
-  align-items: stretch;
-}
-.container {
-	margin: 0 10px;
-	width: 640px;
 }
 .container1 {
-	margin: auto auto;
-	width: 640px;
+  margin: 80px auto;
+  width: 640px;
 }
-.login {
+.container {
+  margin: 80px auto;
+  width: 640px;
+}
+
+.login,.overview {
   position: relative;
   margin: 0 auto;
   padding: 20px 20px 20px;
@@ -78,7 +65,7 @@ body {
   background: rgba(0, 0, 0, 0.08);
   border-radius: 4px;
 }
-.login h1 {
+.login h1,.overview h1 {
   margin: -20px -20px 21px;
   line-height: 40px;
   font-size: 15px;
@@ -109,9 +96,9 @@ body {
 .login p.remember_me {
   float: left;
   line-height: 31px;
+  font-size: 12px;
 }
 .login p.remember_me label {
-  font-size: 12px;
   color: #777;
   cursor: pointer;
 }
@@ -125,34 +112,32 @@ body {
 
 .login-help {
   margin: 20px 0;
-  font-size: 11px;
   color: black;
   text-align: center;
   text-shadow: 0 1px #2a85a1;
+  font-size: 13px;
 }
 .login-help a {
-  color: blue;
+  color: #49097a;
   text-decoration: none;
   cursor: pointer;
 }
 .login-help a:hover {
-  color: red;
+  color: #c33538;
   text-decoration: underline;
+  text-shadow: 1px 1px 2px black;
 }
 
 :-moz-placeholder {
   color: #c9c9c9 !important;
-  font-size: 13px;
 }
 
 ::-webkit-input-placeholder {
   color: #ccc;
-  font-size: 13px;
 }
 
 input {
   font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
-  font-size: 14px;
 }
 .lt-ie9 input[type=text], .lt-ie9 input[type=password] {
   line-height: 34px;
@@ -210,42 +195,3 @@ button:active {
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
 }
-.th-ul{
-	list-style-type:none;
-	padding:0;margin:0
-	}
-.th-ul li{
-	padding:8px 16px;
-	border-bottom:1px solid #ddd
-	}
-.th-ul li:last-child{
-	border-bottom:none
-	}
-.theme {
-    color: #fff !important;
-    background-color: #009688 !important;
-	opacity:0.9;
-}
-.theme-dark {
-    color: #fff !important;
-    background-color: #004a43 !important;
-	opacity:0.9;
-}
-.thcontainer, .th-panel {
-	padding:0.01em 16px 16px;
-}
-li:hover
-{
-    background-color: #36C;
-}
-.thcontainer h1 {
-  line-height: 40px;
-  font-size: 15px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  background: black ;
-  opacity:.9;
-  border-bottom: 1px solid #ddd;
-}
-
